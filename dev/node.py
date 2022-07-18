@@ -5,14 +5,14 @@ class Node:
         self._shield = None
         self._father = None
         self._child = []
-        self._user = None
+        self._level = 0
 
     @property
     def pv(self):
         return self._pv
-    
+
     @pv.setter
-    def pv(self, value):
+    def pv(self, value: int):
         self._pv = value
 
     @property
@@ -20,7 +20,7 @@ class Node:
         return self._shield
 
     @shield.setter
-    def shield(self, value):
+    def shield(self, value: int):
         self._shield = value
 
     @property
@@ -40,9 +40,54 @@ class Node:
         self._child = value
 
     @property
-    def user(self):
-        return self._user
+    def level(self):
+        return self._level
 
-    @user.setter
-    def user(self, value):
-        self._user = value
+    @level.setter
+    def level(self, value: int):
+        self._level = value
+
+    def upgrade(self):
+        self._level += 1
+
+
+class LeaderNode(Node):
+
+    def __init__(self, ):
+        super().__init__()
+
+
+class DefenseNode(Node):
+
+    def __init__(self):
+        super().__init__()
+
+
+class HeadDefenseNode(DefenseNode):
+
+    def __init__(self):
+        super().__init__()
+
+
+class AttackNode(Node):
+
+    def __init__(self):
+        super().__init__()
+
+
+class HeadAttackNode(AttackNode):
+
+    def __init__(self):
+        super().__init__()
+
+
+class ProductionNode(Node):
+
+    def __init__(self):
+        super().__init__()
+
+
+class HeadProductionNode(ProductionNode):
+
+    def __init__(self):
+        super().__init__()
