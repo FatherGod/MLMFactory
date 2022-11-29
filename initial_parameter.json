@@ -2,5 +2,6 @@
   "attack" : 10,
   "pv" : 10,
   "level" : 1,
-  "defense" : 10
+  "defense" : 10,
+  "xp" : 0
 }
